@@ -80,6 +80,8 @@ class PayPalStandardBase(Model):
     business = models.CharField(max_length=127, blank=True, help_text="Email where the money was sent.")
     charset = models.CharField(max_length=255, blank=True)
     custom = models.CharField(max_length=256, blank=True)
+    upgrade_type = models.CharField(max_length=256, blank=True)
+    upgrade_email = models.CharField(max_length=256, blank=True)
     notify_version = models.DecimalField(max_digits=64, decimal_places=2, default=0, blank=True, null=True)
     parent_txn_id = models.CharField("Parent Transaction ID", max_length=19, blank=True)
     receiver_email = models.EmailField(max_length=254, blank=True)
